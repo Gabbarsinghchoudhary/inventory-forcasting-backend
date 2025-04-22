@@ -1,9 +1,14 @@
 from flask_pymongo import PyMongo
 import pandas as pd
 from flask import Flask, jsonify, request
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/medication_stock_db"
+app.config["MONGO_URI"] = os.getenv("mongodb")
 mongo = PyMongo(app)
 db = mongo.db
 
@@ -70,3 +75,5 @@ def get_salesmonthly_by_state():
 
     
 
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
