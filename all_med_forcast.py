@@ -42,4 +42,4 @@ def all_forecasts_into_dict():
 
     return all_forecasts_dict
 
-print(all_forecasts_into_dict())
+
