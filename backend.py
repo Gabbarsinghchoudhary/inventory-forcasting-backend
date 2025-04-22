@@ -70,5 +70,3 @@ def get_salesmonthly_by_state():
 
     
 
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
