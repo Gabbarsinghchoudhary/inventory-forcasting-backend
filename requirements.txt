@@ -5,3 +5,4 @@ flask-cors
 Flask-PyMongo
 statsmodels
 scikit-learn
+python-dotenv
